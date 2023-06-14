@@ -17,16 +17,25 @@ inquirer
       name: "viewemployees",
       message: "What Would You Like To Do?",
       type: "list",
-      choices: ["View All Employees", "View All Roles"],
+      choices: ["View All Employees", "Add Employee", "View All Roles", "Add Role", "View All Departments", "Add Department"],
     },
   ])
 
   .then((answers) => {
-    if (answers.viewemployees == "View All Employees") {
+   if (answers.viewemployees == "View All Employees") {
       db.query(`select * from employee`, (err, res) => {
         if (err) throw err;
         console.table(res);
+    });
+   } else if (answers.viewroles == "View All Roles") {
+      db.query(`select * from role`, (err, res) => {
+        if (err) throw err;
+        console.table(res);
       });
-    } else if (answers.viewemployees == "View All Roles") {
-    }
+   } else if (answers.viewemployees == "View All Departments") {
+        db.query(`select * from department`, (err, res) => {
+          if (err) throw err;
+          console.table(res);
+      });  
+
   });

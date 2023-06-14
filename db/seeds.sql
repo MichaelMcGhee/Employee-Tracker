@@ -15,8 +15,8 @@ insert into role (title, salary, department_id) values
 
 insert into employee (first_name, last_name, role_id, manager_id) values
     ("Michael", "McGhee", 1, null),
-    ("Jake", "Willis", 2, 1),
-    ("John", "Willis", 3, 1),
-    ("Jane", "Willis", 4, 1);
+    ("Jake", "Doss", 2, 1),
+    ("Mark", "Jacob", 3, 1),
+    ("Jane", "Smith", 4, 1);
 
 
