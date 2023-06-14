@@ -26,7 +26,7 @@ inquirer
       db.query(`select * from employee`, (err, res) => {
         if (err) throw err;
         console.table(res);
-    });
+      });
    } else if (answers.viewroles == "View All Roles") {
       db.query(`select * from role`, (err, res) => {
         if (err) throw err;
