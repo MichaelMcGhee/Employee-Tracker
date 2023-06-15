@@ -18,10 +18,11 @@ inquirer
       message: "What Would You Like To Do?",
       type: "list",
       choices: ["View All Employees", "Add Employee", "View All Roles", "Add Role", "View All Departments", "Add Department"],
-    },
+    }
   ])
 
   .then((answers) => {
+   console.log (answers);
    if (answers.viewemployees == "View All Employees") {
       db.query(`select * from employee`, (err, res) => {
         if (err) throw err;
@@ -38,4 +39,4 @@ inquirer
           console.table(res);
       });  
 
-  });
+  }});
